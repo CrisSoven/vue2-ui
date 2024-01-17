@@ -56,6 +56,11 @@ const routes = [
                 name: 'limpieza',
                 component: () => import('../components/Limpieza.vue')
             },
+            {
+                path: '/categories/limpieza/detergente',
+                name: 'detergente',
+                component: () => import('../components/Detergente.vue')
+            },
         ]
     },
 ]

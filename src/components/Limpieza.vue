@@ -2,6 +2,7 @@
   <div>
     <b-breadcrumb :items="items" />
     <h1>Productos de limpieza</h1>
+    <b-button variant="success" href="#/categories/limpieza/detergente">Detergente industrial</b-button>
   </div>
 </template>
 
@@ -11,12 +12,12 @@ export default {
     return {
       items: [
         {
-          text: "Tienda de electrodomesticos",
-          href: "#/info",
-          name: "info"
+          text: "Tienda de productos para el hogar",
+          href: "#/categories",
+          name: "categories"
         },
         {
-          text: "Cocina",
+          text: "Productos de limpieza",
           active: true,
         },
       ],
