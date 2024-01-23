@@ -4,18 +4,31 @@ import Vue from "vue"
 Vue.use(VueRouter);
 
 const routes = [
+    //la ruta base
     {
         path: '/',
-        redirect: '/inicio'
+        component: () => import('../components/LandPage.vue')
     },
     {
-        path: '/',
-        component: {
-            render(c) {
-                return c('router-view');
-            },
-        },
+        path: '/formulario',
+        name: 'formulario',
+        component: () => import('../components/Formulario.vue')
+    },
+    {
+        path: '*',
+        component: () => import('../views/ErrorPages/Error404.vue')
+    },
+    {
+        path: '/home',
+        component: () => import('../components/home.vue'),
+
+        //Los componentes que se renderizan en router-vue
         children: [
+            // {
+            //     path: '/',
+            //     name: 'landing',
+            //     component: () => import('../components/LandingPages.vue')
+            // },
             {
                 path: '/inicio',
                 name: 'inicio',
@@ -43,7 +56,7 @@ const routes = [
             },
             {
                 path: '/info/cocina/estufas',
-                name: 'cocina',
+                name: 'estufas',
                 component: () => import('../components/Estufas.vue')
             },
             {
@@ -63,7 +76,11 @@ const routes = [
             },
         ]
     },
+    {
+        path: '*',
+        component: () => import('../views/ErrorPages/Error404.vue')
+    },
 ]
 
-const router = new VueRouter({routes, })
+const router = new VueRouter({ routes, })
 export default router;
