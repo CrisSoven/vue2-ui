@@ -15,6 +15,11 @@ const routes = [
         component: () => import('../components/Formulario.vue')
     },
     {
+        path: '/persons',
+        name: 'persons',
+        component: () => import('../components/Personas.vue')
+    },
+    {
         path: '*',
         component: () => import('../views/ErrorPages/Error404.vue')
     },
