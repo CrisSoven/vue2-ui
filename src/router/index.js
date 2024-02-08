@@ -10,11 +10,6 @@ const routes = [
         component: () => import('../components/LandPage.vue')
     },
     {
-        path: '/formulario',
-        name: 'formulario',
-        component: () => import('../components/Formulario.vue')
-    },
-    {
         path: '/persons',
         name: 'persons',
         component: () => import('../components/Personas.vue')
@@ -25,6 +20,7 @@ const routes = [
     },
     {
         path: '/home',
+        name: 'home',
         component: () => import('../components/home.vue'),
 
         //Los componentes que se renderizan en router-vue
@@ -79,6 +75,11 @@ const routes = [
                 name: 'detergente',
                 component: () => import('../components/Detergente.vue')
             },
+            {
+                path: '/formulario',
+                name: 'formulario',
+                component: () => import('../components/Formulario.vue')
+            },
         ]
     },
     {
@@ -87,5 +88,8 @@ const routes = [
     },
 ]
 
-const router = new VueRouter({ routes, })
+const router = new VueRouter({
+    routes,
+})
 export default router;
+var date = new Date().getUTCDate

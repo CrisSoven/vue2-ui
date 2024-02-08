@@ -10,5 +10,8 @@
     <b-nav-item>
       <b-link :to="{ name: 'categories' }"> Para el hogar </b-link>
     </b-nav-item>
+    <b-nav-item>
+      <b-link :to="{ name: 'formulario' }"> Formulario </b-link>
+    </b-nav-item>
   </b-nav>
 </template>
